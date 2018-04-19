@@ -1,0 +1,13 @@
+*{
+    font-family: inherit;
+}
+
+div.container{
+    border: 1px solid black;
+    width: 400px;
+    height: 550px;
+}
+
+div.container p{
+    text-align: center;
+}
