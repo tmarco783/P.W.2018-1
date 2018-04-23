@@ -34,7 +34,7 @@
                 </div>
 
                 <% 
-                
+                <%@pagelanguage="java"%>          
                 String peso = request.getParameter("inputPeso");
                 String altura = request.getParameter("inputAltura");
                 
