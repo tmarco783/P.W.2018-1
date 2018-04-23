@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>mt.com.br</groupId>
-  <artifactId>IMC com JSP</artifactId>
+  <artifactId>imc-jsp</artifactId>
   <packaging>war</packaging>
   <version>1.0</version>
   <name>IMC com JSP Maven Webapp</name>
@@ -16,6 +16,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>IMC com JSP</finalName>
+    <finalName>IMC-com-JSP</finalName>
   </build>
 </project>
