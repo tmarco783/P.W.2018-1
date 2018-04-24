@@ -8,6 +8,27 @@
     <!-- CSS do Bootstrap -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <% 
+                         
+    String peso = request.getParameter("inputPeso");
+    String altura = request.getParameter("inputAltura");
+    
+    float imc = Float.parseFloat(inputPeso) / (Float.parseFloat(inputAltura) * Float.parseFloat(inputAltura));
+    String condicaoAtual;
+    
+    if(imc < 18){
+        condicaoAtual = "Você está abaixo do peso.";
+    }else if(imc >= 18 && imc < 25){
+        condicaoAtual = "Seu peso está normal.";
+    }else if(imc >= 25 && imc < 30){
+        condicaoAtual = "Você está acima do normal.";
+    }else{
+        condicaoAtual = "Você está obeso.";
+    }
+
+    %>
+
 </head>
 
 <body>
@@ -33,29 +54,19 @@
                   <input type="text" class="form-control" name="inputAltura" placeholder="Digite a altura">
                 </div>
 
-                <% 
-                <%@pagelanguage="java"%>          
-                String peso = request.getParameter("inputPeso");
-                String altura = request.getParameter("inputAltura");
                 
-                float imc = Float.parseFloat(inputPeso) / (Float.parseFloat(inputAltura) * Float.parseFloat(inputAltura));
-                String condicaoAtual;
-                
-                if(imc < 18){
-                    condicaoAtual = "Você está abaixo do peso.";
-                }else if(imc >= 18 && imc < 25){
-                    condicaoAtual = "Seu peso está normal.";
-                }else if(imc >= 25 && imc < 30){
-                    condicaoAtual = "Você está acima do normal.";
-                }else{
-                    condicaoAtual = "Você está obeso.";
-                }
-
-                %>
-                
+    
                 
                 <!-- Botão calcular -->
                 <button type="submit" class="btn btn-primary">Calcular</button>
+
+                <div>
+                  <%
+                  
+                  out.print("Seu imc é: " + imc);
+                  
+                  %>
+                </div>
 
             </form>
 
